@@ -6,6 +6,11 @@
 	table {
 		border-collapse: collapse;
 	}
+	
+	.tablecontainer{
+		vertical-align: top;
+		padding: 10px;
+	}
 </style>
 <script type="text/javascript">
     var loadingmessage = 'Processing...';
@@ -131,12 +136,12 @@ if(myStorage2  != null) document.getElementById('myDeviceId').value = myStorage2
 
 <br><br>
 
-<table>
+<table id="buttons">
 	<tr>
-		<td>
+		<td class="tablecontainer">
 			<table>
 				<tr>
-					<th>Digital Write</th>
+					<th colspan=2>Digital Write</th>
 				</tr>
 				<tr>
 					<td><input type="button" value="D0-send-1" onClick="sendToSpark('d0-dsend-1')"></td>
@@ -196,10 +201,10 @@ if(myStorage2  != null) document.getElementById('myDeviceId').value = myStorage2
 				</tr>
 			</table>
 		</td>
-		<td>
+		<td class="tablecontainer">
 			<table>
 				<tr>
-					<th>Analog Write</th>
+					<th colspan=2>Analog Write</th>
 				</tr>
 				<tr>
 					<td>D0-send-<input type="number" min=0 max=255 id="0"><input type=button onClick="sendToSpark('d0-send-a'+document.getElementById('0').value)" value="Send"></td>
@@ -227,10 +232,10 @@ if(myStorage2  != null) document.getElementById('myDeviceId').value = myStorage2
 				</tr>
 			</table>
 		</td>
-		<td>
+		<td class="tablecontainer">
 			<table>
 				<tr>
-					<th>Digital Read</th>
+					<th colspan=2>Digital Read</th>
 				</tr>
 				<tr>
 					<td><input type="button" value="a0-read" onClick="sendToSpark('a0-dread')"></td>
@@ -266,10 +271,10 @@ if(myStorage2  != null) document.getElementById('myDeviceId').value = myStorage2
 				</tr>
 			</table>
 		</td>
-        <td>
+        <td class="tablecontainer">
 			<table>
 				<tr>
-					<th>Analog Read</th>
+					<th colspan=2>Analog Read</th>
 				</tr>
 				<tr>
 					<td><input type="button" value="a0-read" onClick="sendToSpark('a0-aread')"></td>
